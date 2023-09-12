@@ -6,7 +6,7 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<CgScoreDisplayComponent> = {
   component: CgScoreDisplayComponent,
-  title: 'CgScoreDisplayComponent',
+  title: 'Score Display',
 };
 export default meta;
 type Story = StoryObj<CgScoreDisplayComponent>;

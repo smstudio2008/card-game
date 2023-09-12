@@ -6,7 +6,7 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<CgButtonComponent> = {
   component: CgButtonComponent,
-  title: 'CgButtonComponent',
+  title: 'Button',
 };
 export default meta;
 type Story = StoryObj<CgButtonComponent>;

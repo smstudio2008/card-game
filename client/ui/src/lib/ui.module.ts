@@ -5,6 +5,8 @@ import { CgButtonComponent } from './cg-button/cg-button.component';
 import { CgNavComponent } from './cg-nav/cg-nav.component';
 import { CgScoreDisplayComponent } from './cg-score-display/cg-score-display.component';
 
+import { CgFooterComponent } from './cg-footer/cg-footer.component';
+
 @NgModule({
   imports: [CommonModule],
   declarations: [
@@ -12,12 +14,14 @@ import { CgScoreDisplayComponent } from './cg-score-display/cg-score-display.com
     CgButtonComponent,
     CgNavComponent,
     CgScoreDisplayComponent,
+    CgFooterComponent,
   ],
   exports: [
     CgCardComponent,
     CgButtonComponent,
     CgNavComponent,
     CgScoreDisplayComponent,
+    CgFooterComponent,
   ],
 })
 export class UiModule {}

@@ -6,7 +6,7 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<CgNavComponent> = {
   component: CgNavComponent,
-  title: 'CgNavComponent',
+  title: 'Navigation Bar',
 };
 export default meta;
 type Story = StoryObj<CgNavComponent>;

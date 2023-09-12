@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { CgCardComponent } from './cg-card.component';
+import { CgFooterComponent } from './cg-footer.component';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-const meta: Meta<CgCardComponent> = {
-  component: CgCardComponent,
-  title: 'Card',
+const meta: Meta<CgFooterComponent> = {
+  component: CgFooterComponent,
+  title: 'Footer',
 };
 export default meta;
-type Story = StoryObj<CgCardComponent>;
+type Story = StoryObj<CgFooterComponent>;
 
 export const Primary: Story = {
   args: {},
@@ -19,6 +19,6 @@ export const Heading: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/cg-card works!/gi)).toBeTruthy();
+    expect(canvas.getByText(/cg-footer works!/gi)).toBeTruthy();
   },
 };
