@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+    justify-content: center; // Horizontally center the child div
+    align-items: center; // Vertically center the child div
+    flex-direction: column;
+}
+
+.centered-div {
+    display: flex;
+    gap: 1rem;
+    width: 50%;
+    flex-wrap: wrap;
+}

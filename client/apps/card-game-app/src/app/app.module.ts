@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
-import { NxWelcomeComponent } from './nx-welcome.component';
-import { UiModule } from '@card-game-temp/ui';
-
+import { UiModule } from '@card-game/ui';
+import { PlayCardViewComponent } from './components/play-card-view/play-card-view.component';
+import { SharedModule } from '@card-game/shared';
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [AppComponent, PlayCardViewComponent],
   imports: [
     BrowserModule,
     UiModule,
+    SharedModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],

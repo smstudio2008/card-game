@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "card-game-temp",
+            "prefix": "card-game",
             "style": "kebab-case"
           }
         ]

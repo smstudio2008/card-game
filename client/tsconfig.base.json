@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@card-game-temp/shared": ["shared/src/index.ts"],
-      "@card-game-temp/ui": ["ui/src/index.ts"]
+      "@card-game/shared": ["shared/src/index.ts"],
+      "@card-game/ui": ["ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

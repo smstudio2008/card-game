@@ -1,1 +1,10 @@
-<p>cg-card works!</p>
+<div class="play-card" (click)="toggleSelection()" [class.selected]="isSelected">
+  <div class="play-card--label">{{ card }}</div>
+  <div [ngSwitch]="suit">
+      <div *ngSwitchCase="'hearts'">♥️</div>
+      <div *ngSwitchCase="'diamonds'">♦️</div>
+      <div *ngSwitchCase="'clubs'">♣️</div>
+      <div *ngSwitchCase="'spades'">♠️</div>
+      <div *ngSwitchCase="'joker'">🃏</div>
+  </div>
+</div>

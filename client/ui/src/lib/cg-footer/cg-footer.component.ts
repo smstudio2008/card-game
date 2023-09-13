@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'card-game-temp-cg-footer',
+  selector: 'card-game-footer',
   templateUrl: './cg-footer.component.html',
   styleUrls: ['./cg-footer.component.scss'],
 })

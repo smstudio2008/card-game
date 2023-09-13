@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { CgNavComponent } from './cg-nav.component';
 
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
 
 const meta: Meta<CgNavComponent> = {
   component: CgNavComponent,
@@ -12,13 +10,8 @@ export default meta;
 type Story = StoryObj<CgNavComponent>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    navLabel: "CARD GAME SCORE CALCULATOR"
+  }
 };
 
-export const Heading: Story = {
-  args: {},
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    expect(canvas.getByText(/cg-nav works!/gi)).toBeTruthy();
-  },
-};

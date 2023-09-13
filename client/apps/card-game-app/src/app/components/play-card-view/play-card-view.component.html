@@ -1,0 +1,22 @@
+<div class="flex-container">
+
+    <p>How to Play the game:</p>
+    <p>
+        Enter a list of cards as a comma-separated list.
+    </p>
+    <div class="centered-div">
+
+
+        <ng-container *ngFor="let cards of cardList">
+            <card-game-card
+            (cardToggle)="handleCardToggle($event)"
+            [card]="cards?.card"
+            [suit]="cards?.suit"></card-game-card>
+        </ng-container>
+        
+  
+
+
+
+    </div>
+</div>

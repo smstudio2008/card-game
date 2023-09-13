@@ -1,0 +1,12 @@
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/CardGameAPI
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/appsettings.Development.json
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/appsettings.json
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/CardGameAPI.dll
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/CardGameAPI.deps.json
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/CardGameAPI.runtimeconfig.json
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/CardGameAPI.pdb
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/Microsoft.AspNetCore.OpenApi.dll
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/Microsoft.OpenApi.dll
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/Swashbuckle.AspNetCore.Swagger.dll
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/ssmohamed/Documents/Side-Project/BT-Card Game/card-game/server/obj/Release/net7.0/PubTmp/Out/Swashbuckle.AspNetCore.SwaggerUI.dll

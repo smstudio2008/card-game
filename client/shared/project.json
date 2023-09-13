@@ -2,7 +2,7 @@
   "name": "shared",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "shared/src",
-  "prefix": "card-game-temp",
+  "prefix": "card-game",
   "tags": [],
   "projectType": "library",
   "targets": {

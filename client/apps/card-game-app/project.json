@@ -2,7 +2,7 @@
   "name": "card-game-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "card-game-temp",
+  "prefix": "card-game",
   "sourceRoot": "apps/card-game-app/src",
   "tags": [],
   "targets": {

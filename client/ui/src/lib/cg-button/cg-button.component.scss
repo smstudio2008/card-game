@@ -1,0 +1,26 @@
+$primary-color: #a1ff61;
+$secondary-color: rgb(254, 255, 57);
+
+.button {
+    border: 2px solid #000;
+    border-radius: 2px;
+    width: 140px;
+    height: 44px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 1px 1px 0 0 #000;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 3px 3px 0 0 #000;
+    }
+
+    &.primary {
+        background-color: $primary-color;
+    }
+
+    &.secondary {
+        background-color: $secondary-color;
+    }
+}

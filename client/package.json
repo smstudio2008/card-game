@@ -1,5 +1,5 @@
 {
-  "name": "@card-game-temp/source",
+  "name": "@card-game/source",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {},
@@ -39,6 +39,7 @@
     "@nx/web": "16.8.1",
     "@nx/workspace": "16.8.1",
     "@schematics/angular": "~16.2.0",
+    "@storybook/addon-controls": "^7.4.1",
     "@storybook/addon-essentials": "7.4.1",
     "@storybook/addon-interactions": "^7.2.1",
     "@storybook/angular": "7.4.1",

@@ -8,6 +8,4 @@ export * from './lib/cg-nav/cg-nav.component';
 
 export * from './lib/cg-score-display/cg-score-display.component';
 
-export * from './lib/footer/footer.component';
-
 export * from './lib/cg-footer/cg-footer.component';

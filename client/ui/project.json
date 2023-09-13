@@ -2,7 +2,7 @@
   "name": "ui",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "ui/src",
-  "prefix": "card-game-temp",
+  "prefix": "card-game",
   "tags": [],
   "projectType": "library",
   "targets": {
