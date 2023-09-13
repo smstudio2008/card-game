@@ -1,18 +1,38 @@
 <div class="app-shell">
-
     <nav>
         <card-game-nav></card-game-nav>
     </nav>
 
     <main>
-        <card-game-play-card-view [cardList] ="(cards$ | async)?.cards"></card-game-play-card-view>
+        <card-game-play-card-view
+            (cardToggle)="selectedCardList($event)"
+            [cardList]="(cards$ | async)?.cards">
+        </card-game-play-card-view>
 
-        <card-game-button [buttonLabel]="'Lets Play'" [buttonStyle]="'secondary'" ></card-game-button>
-        <card-game-temp-display></card-game-temp-display>
+        <ng-container *ngIf="calculatedScore$ | async as score">
+            <card-game-temp-display [countTo]="score"></card-game-temp-display>
+        </ng-container>
+
+        <div
+            *ngIf="errorMessage"
+            class="error-message">
+            {{ errorMessage }}
+        </div>
+
+        <card-game-button
+            (click)="getTheScore()"
+            [buttonLabel]="'Calculate Score'"
+            [buttonStyle]="'secondary'">
+        </card-game-button>
+
+        <card-game-button  *ngIf="errorMessage"
+        (click)="reset()"
+        [buttonLabel]="'Reset'"
+        [buttonStyle]="'primary'">
+        </card-game-button>
     </main>
 
     <footer>
         <card-game-footer></card-game-footer>
     </footer>
-
 </div>

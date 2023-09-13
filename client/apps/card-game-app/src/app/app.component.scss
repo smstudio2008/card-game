@@ -1,16 +1,20 @@
 .app-shell {
     display: grid;
-    grid-template-rows: auto 1fr auto; // auto for nav, 1fr for main (occupies remaining space), and auto for footer
+    grid-template-rows: auto 1fr auto;
     height: calc(100vh - 20px);
 
     main {
-        // Styles for the main content area
-        background-color: #f5f5f5; // Example background color for visual separation
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 1rem;
-        gap: 2rem;
+        gap: 1rem;
+        background-color: #f5f5f5;
+
+        .error-message {
+            color: rgb(255, 47, 47);
+            font-size: 1.5rem;
+        }
     }
 
 }

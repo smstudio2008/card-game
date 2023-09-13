@@ -1,5 +1,6 @@
+import { CgCardComponent } from './cg-card.component';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CgCardComponent } from '../cg-card/cg-card.component';
 
 describe('Given CgCardComponent as angular component', () => {
   let component: CgCardComponent;
@@ -9,57 +10,72 @@ describe('Given CgCardComponent as angular component', () => {
     await TestBed.configureTestingModule({
       declarations: [CgCardComponent],
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(CgCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have default values', () => {
+  it('should have default card and suit values', () => {
     expect(component.card).toBe('A');
     expect(component.suit).toBe('hearts');
-    expect(component.isSelected).toBe(false);
   });
 
-  it('should toggle card selection', () => {
-    expect(component.isSelected).toBe(false);
-    component.toggleSelection();
-    expect(component.isSelected).toBe(true);
-    component.toggleSelection();
-    expect(component.isSelected).toBe(false);
-  });
-
-  it('should emit correct data when card is toggled', () => {
-    component.cardToggle.emit = jest.fn();  // Mocking the emit method
+  it('should toggle card selection and emit an event', () => {
+    const spy = jest.spyOn(component.cardToggle, 'emit');
 
     component.toggleSelection();
 
-    expect(component.cardToggle.emit).toHaveBeenCalledWith({
-      card: 'A',
-      suit: 'hearts',
+    expect(component.isSelected).toBeTruthy();
+    expect(spy).toHaveBeenCalledWith({
+      cardRepresentation: 'AH',
       selected: true,
+    });
+
+    component.toggleSelection();
+
+    expect(component.isSelected).toBeFalsy();
+    expect(spy).toHaveBeenCalledWith({
+      cardRepresentation: 'AH',
+      selected: false,
     });
   });
 
-  it('should accept input values and emit correct data when toggled', () => {
-    component.card = 'K';
-    component.suit = 'spades';
-    fixture.detectChanges();
+  it('should deselect card', () => {
+    component.isSelected = true;
 
-    component.cardToggle.emit = jest.fn();  // Mocking the emit method again
+    component.deselectCard();
 
-    component.toggleSelection();
+    expect(component.isSelected).toBeFalsy();
+  });
 
-    expect(component.cardToggle.emit).toHaveBeenCalledWith({
-      card: 'K',
-      suit: 'spades',
-      selected: true,
-    });
+  it('should give correct card representation', () => {
+    component.card = 'Q';
+    component.suit = 'diamonds';
+
+    const cardRepresentation = component['getCardRepresentation']();
+
+    expect(cardRepresentation).toBe('QD');
+  });
+
+  it('should give correct representation for JOKER', () => {
+    component.card = 'JOKER';
+
+    const cardRepresentation = component['getCardRepresentation']();
+
+    expect(cardRepresentation).toBe('JK');
+  });
+
+  it('should give correct representation for card 10', () => {
+    component.card = '10';
+    component.suit = 'clubs';
+
+    const cardRepresentation = component['getCardRepresentation']();
+
+    expect(cardRepresentation).toBe('TC');
   });
 });

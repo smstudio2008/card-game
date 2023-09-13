@@ -1,22 +1,23 @@
 <div class="flex-container">
-
-    <p>How to Play the game:</p>
+    <p>CARD GAME SCORE CALCULATOR</p>
     <p>
-        Enter a list of cards as a comma-separated list.
+        Select a number of cards or enter your favorite cards in the box
     </p>
-    <div class="centered-div">
 
+    <input
+        #cardInput
+        type="text"
+        maxlength="3"
+        (input)="captureInput(cardInput.value)">
 
-        <ng-container *ngFor="let cards of cardList">
+    <div class="cards">
+        <ng-container *ngFor="let cardPlay of cardList">
             <card-game-card
-            (cardToggle)="handleCardToggle($event)"
-            [card]="cards?.card"
-            [suit]="cards?.suit"></card-game-card>
+                (cardToggle)="handleCardToggle($event)"
+                [card]="cardPlay.card"
+                [suit]="cardPlay.suit">
+            </card-game-card>
         </ng-container>
-        
-  
-
-
 
     </div>
 </div>

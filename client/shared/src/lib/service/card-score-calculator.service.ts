@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { Observable } from 'rxjs';
 
-interface Card {
+export interface Card {
   card: string;
   suit: string;
 }
@@ -11,11 +12,16 @@ interface Card {
   providedIn: 'root',
 })
 export class CardScoreCalculatorService {
-  private apiUrl = 'https://mocki.io/v1/0b352833-519d-49e4-b908-6b121dfe435b';
+  public readonly apiUrl = 'https://mocki.io/v1/272c2cf8-8e78-42c3-80c1-3e68c30423e4';
+  public readonly postUrl = 'https://cardgameapi2023.azurewebsites.net/score';
 
-  constructor(private http: HttpClient) {}
+  private _http: HttpClient = inject(HttpClient);
 
-  getCards(): Observable<Card[]> {
-    return this.http.get<Card[]>(this.apiUrl);
+  public getCards(): Observable<{ cards: Card[] }> {
+    return this._http.get<{ cards: Card[] }>(this.apiUrl);
+  }
+
+  public submitCalculation(cardList: string[]): Observable<number> {
+    return this._http.post<number>(this.postUrl, cardList);
   }
 }

@@ -1,13 +1,25 @@
 .flex-container {
     display: flex;
-    justify-content: center; // Horizontally center the child div
-    align-items: center; // Vertically center the child div
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-}
 
-.centered-div {
-    display: flex;
-    gap: 1rem;
-    width: 50%;
-    flex-wrap: wrap;
+    input {
+        border: 1px solid #000;
+        border-radius: 2px;
+        width: 200px;
+        height: 34px;
+        font-size: 1rem;
+        font-weight: bold;
+        box-shadow: 1px 1px 0 0 #000;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        gap: 1rem;
+        width: 85%;
+        flex-wrap: wrap;
+    }
 }

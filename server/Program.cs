@@ -1,24 +1,35 @@
 ﻿var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Adding CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("https://game-card-app.azurewebsites.net") 
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
+
+// Swagger configurations
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-
+// Middleware
 app.UseSwagger();
 app.UseSwaggerUI();
-
-
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+// Use CORS middleware
+app.UseCors("AllowSpecificOrigin");
 
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-

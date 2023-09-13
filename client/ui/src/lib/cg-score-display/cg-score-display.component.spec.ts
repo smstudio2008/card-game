@@ -16,12 +16,10 @@ describe('Given gScoreDisplayComponent as angular component', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
 
-    // Enable Jest's fake timers
     jest.useFakeTimers();
   });
 
   afterEach(() => {
-    // Clear all timers after each test
     jest.clearAllTimers();
   });
 
@@ -32,10 +30,9 @@ describe('Given gScoreDisplayComponent as angular component', () => {
   it('should count upwards when new countTo is greater', () => {
     component.countTo = 5;
     fixture.detectChanges();
-    
-    jest.advanceTimersByTime(60); // Let the count animation progress for a while
 
- 
+    jest.advanceTimersByTime(60);
+
     expect(component.currentCountSource.value).toBeLessThanOrEqual(5);
   });
 
@@ -44,7 +41,7 @@ describe('Given gScoreDisplayComponent as angular component', () => {
     component.countTo = 5;
     fixture.detectChanges();
 
-    jest.advanceTimersByTime(60); // Let the count animation progress for a while
+    jest.advanceTimersByTime(60);
 
     expect(component.currentCountSource.value).toBeLessThan(11);
     expect(component.currentCountSource.value).toBeGreaterThanOrEqual(5);
